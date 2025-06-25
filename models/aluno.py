@@ -1,7 +1,6 @@
 from sqlalchemy import Column, String
-from sqlalchemy.orm import declarative_base
+from ..db import Base
 
-Base = declarative_base()
 
 class Aluno(Base):
     __tablename__ = "aluno"

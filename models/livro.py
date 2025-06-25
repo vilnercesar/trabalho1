@@ -1,7 +1,6 @@
 from sqlalchemy import Column, String, Integer
-from sqlalchemy.orm import declarative_base
 
-Base = declarative_base()
+from ..db import Base
 
 class Livro(Base):
     __tablename__ = "livro"
