@@ -1,6 +1,6 @@
 from sqlalchemy import Column, String, Integer, DateTime, ForeignKey
 from sqlalchemy.orm import  relationship
-from ..db import Base
+from models import Base
 from .aluno import Aluno
 class Emprestimo(Base):
     __tablename__ = "emprestimo"

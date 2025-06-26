@@ -1,5 +1,5 @@
 from db import SessionLocal
-from models.aluno import Aluno
+
 from services.aluno_service import AlunoService # Importe o serviço
 
 def main():
@@ -18,7 +18,7 @@ def main():
             alunos = aluno_service.listar_alunos() # Lista novamente
 
         for aluno in alunos:
-            print(f"Matrícula: {aluno.matricula}, Nome: {aluno.nome}, Email: {aluno.email}, Curso: {aluno.curso}")
+            print(f"Matrícula: {aluno.mat_aluno}, Nome: {aluno.nome}, Email: {aluno.email}, Curso: {aluno.curso}")
 
         # Exemplo de busca por ID
         print("\n--- Buscando Aluno por ID ---")
@@ -30,7 +30,7 @@ def main():
 
         # Exemplo de atualização
         print("\n--- Atualizando Aluno ---")
-        aluno_atualizado = aluno_service.atualizar_aluno("2023001", nome="Maria Silva Atualizada", curso="Ciência da Computação")
+        aluno_atualizado = aluno_service.atualizar_aluno(mat_aluno="20210045678", nome="Maria Silva Atualizada", curso="Ciência da Computação")
         if aluno_atualizado:
             print(f"Aluno atualizado: {aluno_atualizado.nome}, Curso: {aluno_atualizado.curso}")
         else:

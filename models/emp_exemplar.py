@@ -1,6 +1,6 @@
 from sqlalchemy import Column, String, Integer, ForeignKey
 from sqlalchemy.orm import  relationship
-from ..db import Base
+from models import Base
 from .exemplar import Exemplar 
 from .emprestimo import Emprestimo
 

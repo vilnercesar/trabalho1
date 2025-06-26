@@ -1,6 +1,6 @@
 from sqlalchemy import Column, String, ForeignKey
 from sqlalchemy.orm import  relationship
-from ..db import Base
+from models import Base
 from .livro import Livro
 class Exemplar(Base):
     __tablename__ = "exemplar"

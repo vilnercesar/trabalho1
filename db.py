@@ -1,8 +1,7 @@
 from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker, declarative_base 
-
-DATABASE_URL = "postgresql+psycopg2://postgres:senha@localhost:5432/lib_bd" # Substitua pelos seus dados
+from sqlalchemy.orm import sessionmaker 
+from models import Base
+DATABASE_URL = "postgresql+psycopg2://postgres:!V123c1234@localhost:5432/lib_bd" # Substitua pelos seus dados
 
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
-Base = declarative_base() 

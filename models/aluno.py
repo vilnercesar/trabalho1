@@ -1,5 +1,5 @@
 from sqlalchemy import Column, String
-from ..db import Base
+from models import Base
 
 
 class Aluno(Base):
