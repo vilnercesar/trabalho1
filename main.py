@@ -22,7 +22,7 @@ def main():
 
         # Exemplo de busca por ID
         print("\n--- Buscando Aluno por ID ---")
-        aluno_encontrado = aluno_service.buscar_aluno_por_id("2023001")
+        aluno_encontrado = aluno_service.buscar_aluno_por_id("20230154987")
         if aluno_encontrado:
             print(f"Aluno encontrado: {aluno_encontrado.nome}")
         else:
@@ -30,7 +30,7 @@ def main():
 
         # Exemplo de atualização
         print("\n--- Atualizando Aluno ---")
-        aluno_atualizado = aluno_service.atualizar_aluno(mat_aluno="2023001", nome="Maria Silva Atualizada", curso="Ciência da Computação")
+        aluno_atualizado = aluno_service.atualizar_aluno(mat_aluno="20230154987", nome="Maria Silva Atualizada", curso="Ciência da Computação")
         if aluno_atualizado:
             print(f"Aluno atualizado: {aluno_atualizado.nome}, Curso: {aluno_atualizado.curso}")
         else:
