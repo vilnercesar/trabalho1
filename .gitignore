@@ -1,0 +1,41 @@
+# Ignorar diretórios de ambiente virtual
+venv/
+.venv/
+env/
+.env/
+
+# Ignorar arquivos de cache e compilação do Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# Ignorar arquivos de dados e logs gerados localmente
+*.log
+*.sqlite3
+*.db
+!*.sql # Não ignorar arquivos .sql na pasta database/
+/database/*.sql # Ignorar apenas os .sql dentro da pasta database/ se não for o caso do seu projeto, mas como você quer compartilhar, o !*.sql é mais adequado.
+
+# Ignorar arquivos de backup e temporários de editores/IDE
+*.swp
+*~
+.DS_Store # macOS
+.vscode/ # Configurações do VS Code específicas do usuário
+.idea/ # Arquivos do PyCharm
+*.sublime-project
+*.sublime-workspace
+
+# Ignorar arquivos de configuração sensíveis (se existirem, por exemplo, para chaves de API)
+*.ini
+*.cfg
+*.conf
+.flaskenv
+
+# Ignorar arquivos de dados grandes ou dumps de banco de dados (se não forem parte do esquema)
+# No seu caso, você quer os .sql, então não os ignore
+# *.dump
+# *.sql
